@@ -13,14 +13,14 @@ public class ChannelService {
 	private ChannelRepository repo;
  
  /*
-  * »ñÈ¡ËùÓĞÆµµÀ
+  * è·å–æ‰€æœ‰é¢‘é“
   * */
  public List<Channel> getAllChannels(){
 	 return repo.findAll();
  }
  
  /*
-  * »ñÈ¡Ò»¸öÆµµÀ
+  * è·å–ä¸€ä¸ªé¢‘é“
   * @param id
   * @return
   * */
@@ -34,7 +34,7 @@ public class ChannelService {
  }
  /*
   * 
-  * É¾³ıÒ»¸öÆµµÀ
+  * åˆ é™¤ä¸€ä¸ªé¢‘é“
   * */
  public boolean deleteChannel(String channelId) {
 	 boolean result = true;
@@ -43,7 +43,7 @@ public class ChannelService {
  }
  /*
   * 
-  * ¸üĞÂÒ»¸öÆµµÀ
+  * æ›´æ–°ä¸€ä¸ªé¢‘é“
   * 
   * */
  public Channel updateChannel(cn.edu.scujcc.Channel c) {
@@ -67,7 +67,7 @@ public class ChannelService {
 	 return repo.save(saved);
  }
  /*
-  * ĞÂ½¨
+  * æ–°å»º
   * */
  public Channel creatChannel(Channel c) {
 //	 c.setId(this.channels.get(this.channels.size() -1).getId() +1);
