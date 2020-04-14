@@ -25,39 +25,39 @@ public class ChannelController {
 	@Autowired
 	private ChannelService service;
 	/*
-	 * »ñµÃÈ«²¿ÆµµÀ
+	 * è·å¾—å…¨éƒ¨é¢‘é“
 	 * 
 	 * */
 	@GetMapping
 	public List<Channel> getAllChannels(){
-		logger.info("ÕıÔÚ²éÕÒËùÓĞÆµµÀĞÅÏ¢...");
+		logger.info("æ­£åœ¨æŸ¥æ‰¾æ‰€æœ‰é¢‘é“ä¿¡æ¯...");
 		List<Channel> results = service.getAllChannels();
-		logger.debug("ËùÓĞÆµµÀµÄÊıÁ¿ÊÇ:"+results.size());
+		
 		return results;
 	}
 	
 	/*
-	 * »ñµÃÒ»¸öÆµµÀ
+	 * è·å¾—ä¸€ä¸ªé¢‘é“
 	 * */
 	@GetMapping("/{id}")
   public Channel getChannel(@PathVariable String id) {
 	  return this.service.getChannel(id);
   }
 	/*
-	 * É¾³ıÒ»¸öÆµµÀ
+	 * åˆ é™¤ä¸€ä¸ªé¢‘é“
 	 * 
 	 * */
 	@DeleteMapping("/{id}")
 	public ResponseEntity<String> deleteChannel(@PathVariable String id) {
 		boolean result =this.service.deleteChannel(id);
 		if(result) {
-			return ResponseEntity.ok().body("É¾³ı³É¹¦");
+			return ResponseEntity.ok().body("åˆ é™¤æˆåŠŸ");
 		}else {
-			return ResponseEntity.ok().body("É¾³ıÊ§°Ü");
+			return ResponseEntity.ok().body("åˆ é™¤å¤±è´¥");
 		}
 	}	
 	/*
-	 * ĞÂ½¨Ò»¸öÆµµÀ
+	 * æ–°å»ºä¸€ä¸ªé¢‘é“
 	 * */
 	@PostMapping
 	public Channel creatChannel(@RequestBody Channel c) {
