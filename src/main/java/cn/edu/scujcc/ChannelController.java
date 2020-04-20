@@ -30,7 +30,7 @@ public class ChannelController {
 	 * */
 	@GetMapping
 	public List<Channel> getAllChannels(){
-		logger.info("正在查找所有频道信息...");
+		logger.info("正在查找所有频道信息！！！");
 		List<Channel> results = service.getAllChannels();
 		
 		return results;
