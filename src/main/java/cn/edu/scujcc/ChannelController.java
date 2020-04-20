@@ -61,6 +61,7 @@ public class ChannelController {
 	 * */
 	@PostMapping
 	public Channel creatChannel(@RequestBody Channel c) {
+		logger.info("正在查找所有频道信息...");
 		return this.service.creatChannel(c);
 	}
 	@PutMapping
